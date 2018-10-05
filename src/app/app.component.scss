@@ -1,0 +1,9 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  background-image: url('./../assets/penguins.png');
+  background-size: cover;
+}

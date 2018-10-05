@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target="da" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="Species" datatype="html">
+        <source>species</source>
+        <!-- <context-group purpose="location">
+          <context context-type="sourcefile">app/penguinmodule/penguin.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group> -->
+        <target>Art</target>
+      </trans-unit>
+      <trans-unit id="MaleCount" datatype="html">
+        <source>species</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/penguinmodule/penguin.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <target>Art</target>
+      </trans-unit>
+      <trans-unit id="FemaleCount" datatype="html">
+        <source>femaleCount</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/penguinmodule/penguin.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <target>Art</target>
+      </trans-unit>
+      <trans-unit id="EggCount" datatype="html">
+        <source>eggCount</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/penguinmodule/penguin.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <target>Art</target>
+      </trans-unit>
+      <trans-unit id="Growth" datatype="html">
+        <source>growth</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/penguinmodule/penguin.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Penguins" datatype="html">
+        <source>penguins</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/penguinmodule/penguin.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <target>Art</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

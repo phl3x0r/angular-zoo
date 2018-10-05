@@ -1,0 +1,35 @@
+.negative,
+.positive {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  &::before {
+    font-size: x-large;
+    display: flex;
+  }
+}
+.positive {
+  color: green;
+  &::before {
+    content: '\25B4';
+    color: green;
+  }
+}
+
+.negative {
+  color: red;
+  &::before {
+    content: '\25BE';
+    color: red;
+  }
+}
+
+.penguin-table {
+  width: 800px;
+  position: relative;
+}
+
+.background {
+  background-image: url('./../../assets/penguins.png');
+}

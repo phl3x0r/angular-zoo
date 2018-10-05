@@ -1,0 +1,25 @@
+<div class="penguin-table">
+  <penguin-table-list title="penguins" [data]="penguinData" [displayedColumns]="columnsToDisplay"></penguin-table-list>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- templates -->
+<ng-template #translator let-name>
+  <ng-container [ngSwitch]="name">
+    <span *ngSwitchCase="'species'" i18n="@@Species">species</span>
+    <span *ngSwitchCase="'maleCount'" i18n="@@MaleCount">maleCount</span>
+    <span *ngSwitchCase="'femaleCount'" i18n="@@FemaleCount">femaleCount</span>
+    <span *ngSwitchCase="'eggCount'" i18n="@@EggCount">eggCount</span>
+    <span *ngSwitchCase="'growth'" i18n="@@Growth">growth</span>
+    <span *ngSwitchCase="'penguins'" i18n="@@Penguins">penguins</span>
+  </ng-container>
+</ng-template>
