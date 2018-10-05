@@ -4,10 +4,16 @@
 
     <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col.name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>
-        {{col.name}}
+        <ng-container *ngTemplateOutlet="formatters['translator']; context: { $implicit: col.name}">
+        </ng-container>
       </th>
+
       <td mat-cell class="data-cell" *matCellDef="let element">
-        {{element[col.name]}}
+        <ng-container *ngIf="col.cellFormatter; else noFormatter">
+          <ng-container *ngTemplateOutlet="formatters[col.cellFormatter]; context: { $implicit: element[col.name]}">
+          </ng-container>
+        </ng-container>
+        <ng-template #noFormatter>{{element[col.name]}}</ng-template>
       </td>
     </ng-container>
 

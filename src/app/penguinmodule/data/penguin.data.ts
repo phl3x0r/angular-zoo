@@ -57,7 +57,6 @@ export const penguinData: PenguinData[] = [
 
 export interface PenguinData {
   species: string;
-
   maleCount?: number;
   femaleCount?: number;
   eggCount?: number;

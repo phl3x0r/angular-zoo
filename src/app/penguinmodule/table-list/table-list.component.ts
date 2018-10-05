@@ -1,4 +1,10 @@
-import { Component, Input, ViewChild, TemplateRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewChild,
+  TemplateRef,
+  ViewEncapsulation
+} from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 
@@ -12,6 +18,9 @@ export class TableListComponent {
 
   private _displayedColumns: DisplayedColumns;
   columnList: string[];
+
+  @Input()
+  formatters: { [id: string]: TemplateRef<any> };
 
   @Input()
   set displayedColumns(columns: DisplayedColumns) {
@@ -66,4 +75,6 @@ export class TableListComponent {
 
 export type DisplayedColumns = Array<{
   name: string;
+  cellFormatter?: string;
+  translator?: string;
 }>;

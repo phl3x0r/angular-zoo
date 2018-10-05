@@ -1,21 +1,17 @@
 <div class="penguin-table">
-  <penguin-table-list title="penguins" [data]="penguinData" [displayedColumns]="columnsToDisplay"></penguin-table-list>
+  <penguin-table-list title="penguins" [data]="penguinData" [displayedColumns]="columnsToDisplay" [formatters]="{redGreen: redGreen, translator: translator}">
+  </penguin-table-list>
 </div>
 
 
-
-
-
-
-
-
-
-
+<ng-template #redGreen let-number>
+  <span [ngClass]="{'positive': number > 0, 'negative': number < 0}">{{number | number:'1.2-3'}}</span>
+</ng-template>
 
 <!-- templates -->
 <ng-template #translator let-name>
   <ng-container [ngSwitch]="name">
-    <span *ngSwitchCase="'species'" i18n="@@Species">species</span>
+    <span *ngSwitchCase="'species'" i18n="@@Species">species SHOW IT</span>
     <span *ngSwitchCase="'maleCount'" i18n="@@MaleCount">maleCount</span>
     <span *ngSwitchCase="'femaleCount'" i18n="@@FemaleCount">femaleCount</span>
     <span *ngSwitchCase="'eggCount'" i18n="@@EggCount">eggCount</span>

@@ -11,5 +11,5 @@ export const penguinColumns: DisplayedColumns = [
     name: 'femaleCount'
   },
   { name: 'eggCount' },
-  { name: 'growth' }
+  { name: 'growth', cellFormatter: 'redGreen' }
 ];

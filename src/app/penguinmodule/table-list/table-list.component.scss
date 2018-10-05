@@ -30,29 +30,15 @@
   background: white;
 }
 
-.header-left {
-  &.mat-sort-header-container {
-    justify-content: flex-start;
-  }
-}
-.header-right {
-  &.mat-sort-header-container {
-    justify-content: flex-end;
-  }
-}
-.header-center {
-  &.mat-sort-header-container {
-    justify-content: center;
-  }
-}
-
 th,
 td,
-th.mat-header-cell {
+.mat-sort-header-container {
   font-size: smaller;
   color: black;
   text-align: right;
+  justify-content: flex-end !important;
   &:first-of-type {
+    justify-content: flex-start !important;
     text-align: left;
     padding-left: 24px;
   }
