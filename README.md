@@ -1,6 +1,6 @@
 # Angular ZOO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+Playground for teaching, demonstrating and otherwise playing around with the Angular framework.
 
 ## Penguin Module
 
