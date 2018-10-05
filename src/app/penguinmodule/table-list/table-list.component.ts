@@ -14,9 +14,6 @@ export class TableListComponent {
   columnList: string[];
 
   @Input()
-  translator: TemplateRef<any>;
-
-  @Input()
   set displayedColumns(columns: DisplayedColumns) {
     this._displayedColumns = columns;
     this.columnList = columns && columns.map(c => c.name);
