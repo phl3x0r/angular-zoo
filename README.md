@@ -1,8 +1,8 @@
 # Angular ZOO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+Playground for teaching, demonstrating and otherwise playing around with the Angular framework.
 
-## Kitten Module
+## Penguin Module
 
-This is a module where I play around with ngrx and data caching
+Used to demonstrate context dependant template injection for generic/shared components.
 
