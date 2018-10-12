@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { PenguinComponent } from './penguin.component';
 import { TableListModule } from './table-list/table-list.module';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PenguinTabsComponent } from './penguin-tabs/penguin-tabs.component';
 
 @NgModule({
   imports: [
@@ -14,9 +16,10 @@ import { TableListModule } from './table-list/table-list.module';
       }
     ]),
     CommonModule,
-    TableListModule
+    TableListModule,
+    MatTabsModule
   ],
   exports: [],
-  declarations: [PenguinComponent]
+  declarations: [PenguinComponent, PenguinTabsComponent]
 })
 export class PenguinModule {}

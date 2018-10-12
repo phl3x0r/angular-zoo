@@ -4,6 +4,7 @@
 </div>
 
 
+
 <ng-template #redGreen let-number>
   <span [ngClass]="{'positive': number > 0, 'negative': number < 0}">{{number | number:'1.2-3'}}</span>
 </ng-template>

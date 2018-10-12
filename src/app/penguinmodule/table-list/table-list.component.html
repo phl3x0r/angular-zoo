@@ -1,5 +1,4 @@
 <ng-container *ngIf="dataSource && dataSource.filteredData && dataSource.filteredData.length > 0; else emptyDefault">
-  <div class="group-header" *ngIf="title">{{title}}</div>
   <table mat-table [dataSource]="dataSource" matSort>
 
     <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col.name">

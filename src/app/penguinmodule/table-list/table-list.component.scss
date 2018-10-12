@@ -35,7 +35,7 @@ td,
 .mat-sort-header-container {
   font-size: smaller;
   color: black;
-  text-align: right;
+  text-align: left;
   justify-content: flex-end !important;
   &:first-of-type {
     justify-content: flex-start !important;
@@ -43,6 +43,7 @@ td,
     padding-left: 24px;
   }
   &:last-of-type {
+    text-align: left;
     padding-right: 24px;
   }
 }
