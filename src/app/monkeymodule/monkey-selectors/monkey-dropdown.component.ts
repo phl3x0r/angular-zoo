@@ -1,12 +1,5 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  ComponentRef,
-  OnDestroy
-} from '@angular/core';
-import { MonkeySelector, Monkey } from './monkey-selector.interface';
+import { Component, Input, ComponentRef, OnDestroy } from '@angular/core';
+import { MonkeySelector, Monkey } from './monkey-selector';
 import { ComponentType, ComponentPortal } from '@angular/cdk/portal';
 import { Subscription } from 'rxjs';
 
@@ -14,15 +7,8 @@ import { Subscription } from 'rxjs';
   selector: 'app-monkey-dropdown',
   templateUrl: './monkey-dropdown.component.html'
 })
-export class MonkeyDropdownComponent implements MonkeySelector, OnDestroy {
-  @Input()
-  expanded: boolean;
-  @Output()
-  expandedChange = new EventEmitter<boolean>();
-  @Input()
-  selected: Monkey;
-  @Output()
-  selectedChange = new EventEmitter<Monkey>();
+export class MonkeyDropdownComponent extends MonkeySelector
+  implements OnDestroy {
   monkeySelectors: ComponentPortal<MonkeySelector>[];
   @Input()
   set selectors(selectors: ComponentType<MonkeySelector>[]) {

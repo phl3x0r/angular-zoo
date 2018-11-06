@@ -1,1 +1,1 @@
-export * from './monkey-selector.interface';
+export * from './monkey-selector';
