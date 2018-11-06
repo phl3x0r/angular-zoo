@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 
-export interface MonkeySelector {
+export abstract class MonkeySelector {
   selected: Monkey;
   selectedChange: EventEmitter<Monkey>;
   expanded: boolean;

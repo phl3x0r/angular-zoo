@@ -1,8 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApeSelectorComponent } from './monkey-selectors/ape-selector.component';
 import { interval } from 'rxjs';
 import { take } from 'rxjs/operators';
-import { ComponentType } from '@angular/core/src/render3';
 import { MonkeySelector } from './monkey-selectors';
 
 @Component({
@@ -11,10 +10,8 @@ import { MonkeySelector } from './monkey-selectors';
   styleUrls: ['./monkey.component.scss']
 })
 export class MonkeyComponent implements OnInit {
-  constructor(private cdr: ChangeDetectorRef) {}
-
-  _selectors = [ApeSelectorComponent];
-  set selectors(s) {
+  _selectors: (typeof MonkeySelector)[] = [ApeSelectorComponent];
+  set selectors(s: (typeof MonkeySelector)[]) {
     this._selectors = s;
   }
   get selectors() {
