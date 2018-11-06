@@ -1,0 +1,10 @@
+<button (click)="expandedChange.emit(!expanded)">
+    <span *ngIf="selected; else pleaseTemplate">{{selected.name}} - {{selected.habitat}}</span>
+</button>
+<div *ngIf="expanded">
+    <ng-template *ngFor="let monkeySelector of monkeySelectors" [cdkPortalOutlet]="monkeySelector" (attached)="attachSelector($event)"></ng-template>
+</div>
+
+<ng-template #pleaseTemplate>
+    Please select a monkey
+</ng-template>
