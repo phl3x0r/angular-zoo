@@ -4,12 +4,13 @@ import { ComponentType, ComponentPortal } from '@angular/cdk/portal';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-monkey-dropdown',
+  selector: 'monkey-dropdown',
   templateUrl: './monkey-dropdown.component.html'
 })
 export class MonkeyDropdownComponent extends MonkeySelector
   implements OnDestroy {
   monkeySelectors: ComponentPortal<MonkeySelector>[];
+  componentRefs: ComponentRef<MonkeySelector>[] = [];
   @Input()
   set selectors(selectors: ComponentType<MonkeySelector>[]) {
     this.monkeySelectors = selectors.map(s => new ComponentPortal(s));
@@ -17,10 +18,12 @@ export class MonkeyDropdownComponent extends MonkeySelector
 
   private subs: Subscription[] = [];
 
-  attachSelector(selector: ComponentRef<MonkeySelector>) {
+  attachSelector(componentRef: ComponentRef<MonkeySelector>) {
+    this.componentRefs.push(componentRef);
     this.subs.push(
-      selector.instance.selectedChange.subscribe((m: Monkey) => {
-        this.selectedChange.emit(m);
+      componentRef.instance.monkeyChange.subscribe((m: Monkey) => {
+        this.componentRefs.forEach(cref => (cref.instance.monkey = m));
+        this.monkeyChange.emit(m);
       })
     );
   }

@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MonkeyComponent } from './monkey.component';
 import { CommonModule } from '@angular/common';
-import { MatTabsModule } from '@angular/material/tabs';
-import { ApeSelectorComponent } from './monkey-selectors/ape-selector.component';
-import { MonkeyDropdownComponent } from './monkey-selectors/monkey-dropdown.component';
+
 import { PortalModule } from '@angular/cdk/portal';
+import { MonkeySelectorModule } from './monkey-selectors';
+import { MatCardModule } from '@angular/material/card';
+import { CountSelectorModule } from './count-selectors';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -17,14 +19,11 @@ import { PortalModule } from '@angular/cdk/portal';
     ]),
     CommonModule,
     PortalModule,
-    MatTabsModule
+    MatCardModule,
+    MonkeySelectorModule,
+    CountSelectorModule
   ],
   exports: [],
-  declarations: [
-    MonkeyComponent,
-    ApeSelectorComponent,
-    MonkeyDropdownComponent
-  ],
-  entryComponents: [ApeSelectorComponent]
+  declarations: [MonkeyComponent]
 })
 export class MonkeyModule {}

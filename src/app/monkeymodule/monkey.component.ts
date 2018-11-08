@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ApeSelectorComponent } from './monkey-selectors/ape-selector.component';
-import { interval } from 'rxjs';
-import { take } from 'rxjs/operators';
-import { MonkeySelector } from './monkey-selectors';
+import {
+  MonkeySelector,
+  SpeciesSelectorComponent,
+  Monkey
+} from './monkey-selectors';
+import { HabitatSelectorComponent } from './monkey-selectors';
 
 @Component({
   selector: 'monkey',
@@ -10,19 +12,10 @@ import { MonkeySelector } from './monkey-selectors';
   styleUrls: ['./monkey.component.scss']
 })
 export class MonkeyComponent implements OnInit {
-  _selectors: (typeof MonkeySelector)[] = [ApeSelectorComponent];
-  set selectors(s: (typeof MonkeySelector)[]) {
-    this._selectors = s;
-  }
-  get selectors() {
-    return this._selectors;
-  }
-
-  ngOnInit() {
-    interval(5000)
-      .pipe(take(10))
-      .subscribe(_ => {
-        this.selectors = [...this.selectors, ApeSelectorComponent];
-      });
-  }
+  count = 0;
+  monkeySelectors: (typeof MonkeySelector)[] = [
+    SpeciesSelectorComponent,
+    HabitatSelectorComponent
+  ];
+  ngOnInit() {}
 }

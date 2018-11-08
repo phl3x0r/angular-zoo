@@ -1,0 +1,4 @@
+<h4>Choose by habitat:</h4>
+<mat-list>
+    <mat-list-item *ngFor="let monkeyItem of monkeys" (click)="monkeyChange.emit(monkeyItem)" [class.selected]="monkeyItem === monkey">{{monkeyItem.habitat}}</mat-list-item>
+</mat-list>
