@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   MonkeySelector,
-  SpeciesSelectorComponent,
-  Monkey
+  SpeciesSelectorComponent
 } from './monkey-selectors';
 import { HabitatSelectorComponent } from './monkey-selectors';
 
